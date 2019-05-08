@@ -1,0 +1,10 @@
+Array
+(
+[uname] => April Tan
+[studentID] => WEK170003
+[email] => apriltan@siswa.um.edu.my
+[password] => april004
+[rpassword] => april004
+[birthday] => 1990-04-06
+[event] => talk
+)
