@@ -1,0 +1,11 @@
+console.log(760 % 9);
+VM79:1 4
+undefined
+
+console.log("WIF2003" + "Web Programming"[10]);
+VM158:1 WIF2003Web Programming [10]0: 10length: 1__proto__: Array(0)
+undefined
+
+console.log("helloworld".length % "him\\".length);
+VM172:1 2
+undefined

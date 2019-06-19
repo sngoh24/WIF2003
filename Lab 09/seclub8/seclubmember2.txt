@@ -1,0 +1,10 @@
+Array
+(
+[uname] => jg nn
+[studentID] => hj
+[email] => fjfj@gf.gg
+[password] => hghhg
+[rpassword] => ghg
+[birthday] => 2019-05-21
+[event] => talk
+)
