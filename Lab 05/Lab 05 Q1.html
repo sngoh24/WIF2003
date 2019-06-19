@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Apple Tours</title>
+	</head>
+	
+	<style>
+		.blue{
+			color: blue;
+			border: 1px dashed blue;
+		}
+	</style>
+	
+	<body>
+		<div id="main">
+			<h1>Hello <span id="there">there</span></h1>
+			<p>We provide the tours to these countries:</p>
+			<ul>
+				<li>France</li>
+				<li>Spain</li>
+				<li>Thailand</li>
+			</ul>
+			<a href="#" class="special">
+				<button type="button">Book Tour</button>
+			</a>
+		</div>
+		
+		<script src="jquery-3.3.1.min.js"></script>
+		<script>
+		//DOM
+			//print console
+			var x = document.querySelectorAll("li");
+			for(var i = 0; i < x.length; i++){
+				console.log(x[i].textContent);
+			}
+			//pop-up msg when it is moused over
+			document.querySelector(".special").addEventListener("mouseover", function(){
+				//alert("Book a tour");
+			});
+			
+			//toggle new CSS
+			//document.querySelector("#there").classList.toggle("blue", true);
+		
+		//jQuery
+		$(document).ready(function(){
+			//print console
+			var x = $("ul li").text();
+			for(var i = 1; i < $("ul li").length + 1; i++){
+				console.log($("ul li:nth-child(" + i + ")").text());
+			}
+			//pop-up msg when it is moused over
+			$(".special").mouseover(function(){
+				alert("Book a tour");
+			});
+			
+			//toggle new CSS
+			$("#there").toggleClass("blue");
+		});
+		</script>
+	</body>
+</html>

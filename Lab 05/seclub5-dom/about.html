@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About SE Club</title>
+	<link rel="stylesheet" href="seclub.css">
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+	<h1>Software Engineering Club </h1>
+</header>
+
+<nav><ul>
+	<li><a href="index.html">HOME</a></li>
+	<li><a href="about.html">ABOUT</a></li>
+	<li><a href="events.html">EVENTS</a></li>
+	<li><a href="signup.html">SIGN&nbspUP</a></li>
+</nav></ul>
+
+<main>
+	<h2>Mission and Vision of SE Club</h2>
+
+	<dt><strong>Mission</strong></dt>
+		<dd>A globally-infuential software engineers, enriching lives & shaping the future through SE tecchnology.</dd>
+	<dt><strong>Vision</strong></dt>
+		<dd>To enrich lives and shape the future for the nation and humanity through SE technology.</dd>
+	<blockquote>Hiring people to write code to sell is not the same as hiring people to design and build durable, usable, dependable software<br>
+	-Larry Constantin
+	</blockquote>
+	
+	<h2>SE Club Organisation Chart</h2>
+	<img class="ochartstyle" src="ochart.jpg" alt="SE Club Organisation Chart">
+
+<footer>
+	Copyright &copy 2019 UM Software Engineering Club<br>
+	<a href="mailto:umseclub@um.edu.my">umseclub@um.edu.my</a>
+</footer>
+
+</div>
+
+<script>
+	//mouseenter
+	document.querySelector(".ochartstyle").addEventListener("mouseenter", function(){
+		document.querySelector(".ochartstyle").src = "selogo.jpg";
+	});
+
+	//mouseleave
+	document.querySelector(".ochartstyle").addEventListener("mouseleave", function(){
+		document.querySelector(".ochartstyle").src = "ochart.jpg";
+	});
+</script>
+
+</body>
+</html>

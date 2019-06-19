@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="seclub.css">
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+	<h1>Software Engineering Club </h1>
+</header>
+
+<nav><ul>
+	<li><a href="index.html">HOME</a></li>
+	<li><a href="about.html">ABOUT</a></li>
+	<li><a href="events.html">EVENTS</a></li>
+	<li><a href="signup.html">SIGN&nbspUP</a></li>
+</nav></ul>
+
+<main>
+<h2>Sign Up as SE Club Member</h2>
+	<p>Please fill in this form to create an account. Required information is marked with an asterisk (*).</p>
+
+<form action="/sign-in-url" method="POST">
+	<label for="name">*Name:</label>
+	<input id="name" type="text" name="name" placeholder="Full Name" required>
+
+	<label for="studentid">*Student ID:</label>
+	<input id="studentID" type="text" name="studentID" placeholder="ID" required>
+
+	<label for="email">*E-mail:</label>
+	<input id="email" type="email" name="email" placeholder="Email" required>
+
+	<label for="pw">*Password:</label>
+	<input id="pw" type="password" name="pw" placeholder="Password" required>
+
+	<label>*Repeat Password:</label>
+	<input id="rpw" type="password" name="rpw" placeholder="Password" required>
+
+	<label for="bd">Birthday:</label>
+	<input id="bd" type="date" name="bd">
+
+	<label for="event">Select your most favorite event:</label>
+	<select id="event" name="event">
+	</select>
+
+	<p id=eventvenue></p>
+	
+	<input id="newSubmit" type="submit" value="Sign Up">
+</form>
+</main>
+
+<footer>
+	Copyright &copy 2019 UM Software Engineering Club<br>
+	<a href="mailto:umseclub@um.edu.my">umseclub@um.edu.my</a>
+</footer>
+
+</div>
+
+<script>
+	//create array
+	var arr = {};
+	arr["WS"] = ["Workshop", "MM1"];
+	arr["TA"] = ["Talk", "DK2"];
+	arr["SE"] = ["SE Day", "The Cubes"];
+	arr["CO"] = ["Competition", "MM1"];
+	arr["GA"] = ["Gathering with Alumni", "Student Centre, Block B"];
+	
+	//add in <select>
+	var x = document.querySelector("#event");
+
+	function insertValue(arrNum, index){
+		var c = document.createElement("option");
+		c.text = arr[arrNum][0];
+		x.options.add(c, index);
+	}
+	insertValue("WS", 0);
+	insertValue("TA", 1);
+	insertValue("SE", 2);
+	insertValue("CO", 3);
+	insertValue("GA", 4);
+	
+	//selected index
+	var sel;
+	document.querySelector("select").addEventListener("click", function(){
+		//current index
+		sel = document.querySelector("#event").selectedIndex;
+		switch(sel){
+			case 0: sel = "WS";
+			break;
+			case 1: sel = "TA";
+			break;
+			case 2: sel = "SE";
+			break;
+			case 3: sel = "CO";
+			break;
+			default: sel = "GA";
+			break;
+		}
+		//display venue
+		document.querySelector("#eventvenue").innerHTML = "Event venue is " + arr[sel][1];
+	});
+</script>
+</body>
+</html>
