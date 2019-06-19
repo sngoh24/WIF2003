@@ -1,0 +1,884 @@
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	font-family: Palatino Linotype;
+	border-size: border-box!important;
+	vertical-align: middle;
+}
+
+/* Button to go top */
+#topBtn {
+	display: none;
+	position: fixed;
+	bottom: 40px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: #ff751a;
+	color: white;
+	cursor: pointer;
+	padding: 10px 15px;
+	border-radius: 4px;
+}
+
+#topBtn:hover {
+	background-color: #555;
+}
+
+/*form column 10%*/
+.col-10 {
+	float: left;
+	width: 10%;
+}
+
+/*form column 90%*/
+.col-90 {
+	float: left;
+	width: 90%;
+}
+
+/*form, result column 65%*/
+.col-65 {
+	width: 65%;
+	float: left;
+}
+
+/*form column 12.5%*/
+.col-15left {
+	float: left;
+	width: 12.5%;
+}
+
+/*form column 12.5%*/
+.col-15right {
+	float: right;
+	width: 12.5%;
+}
+
+/*result column 35%*/
+.col-35 {
+	width: 35%;
+	float: right;
+}
+
+/*form column 47.5 */
+.col-45 {
+	width: 47.5%;
+}
+
+/*question column 25 */
+.col-25left {
+	width: 25%;
+	float: left;
+}
+
+/*question column 50 */
+.col-50left {
+	width: 50%;
+	float: left;
+}
+
+.row::after, #resultRow::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+nav {
+	width: 100%;
+	height: 80px;
+	margin-bottom: 10px;
+	line-height: 45px;
+}
+
+.logo {
+	width: 80px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+/* home nav, result nav alignment*/
+#homeNav ul, #resultNav ul {
+	float: right;
+	text-align: right;	
+}
+
+li {
+	border: none;
+	padding: 5px;
+	display: inline-block;
+	font-weight: bold;
+}
+
+a, .startBtn {
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+}
+
+#homeNav li a, .startBtn {
+	padding: 15px 10px;
+}
+
+li a:hover {
+	color: #ff1000;
+}
+
+/* Get Started button */
+.startBtn {
+	background-color: orange;
+	color: white;
+	font-size: 20px;
+	border-radius: 4px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.startBtn:hover {
+	background-color: #ff1000;
+	color: white;
+}
+
+hr {
+	clear: both;
+}
+
+/* header background */
+#head1 {
+	background-image: url(Thinking.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: auto 165%;
+	height: auto;
+}
+
+/* header 1 font size */
+h1 {
+	font-size: 50px;
+	color: #ffa500;
+}
+
+/* header 2 font size */
+h2 {
+	padding-top: 0px;
+	font-size: 40px;
+	color: #ffa500;
+}
+
+/* header 3 font size */
+h3 {
+	font-size: 20px;
+}
+
+/* header font background */
+#headContent1 {
+	padding: 20px 20px 5px;
+	color: #ffa500;
+	width: 50%;
+	background-color: rgba(255, 75, 0, 0.35);
+}
+
+/* header font background */
+#headContent2 {
+	padding: 5px 20px 68.5px;
+	width: 50%;
+	color: white;
+	background-color: rgba(255, 75, 0, 0.35);
+}
+
+/* padding after h3 */
+#headContent2 h3 {
+	padding-bottom: 30px;
+}
+
+/* table in home page */
+.homeTable {
+	text-align: center;
+}
+
+tbody td {
+	padding: 15px;
+}
+
+
+#CTS td, #MISSION td {
+	width: 50%;
+}
+
+#CTS, #MISSION, #contact {
+	height: 100vh;
+}
+
+.homebg, .resultRight {
+	background-repeat: no-repeat; 
+	background-position: center;
+}
+
+#CTS .homebg, .resultRight{
+	background-size: auto; 
+}
+
+#MISSION .homebg {
+	background-size: auto 100%; 
+}
+
+#contactbg {
+	background-color:#555; 
+	width: 30%;
+	color: #ff751a;
+	font-size: 20px;
+}
+
+#contactbg a {
+	text-decoration: none;
+	color: #ff751a;
+}
+
+#contactbg a:hover {
+	color: #ff1000;
+}
+
+#message {
+	background-color: white; 
+	width: 70%; 
+	color: #555;
+}
+
+form {
+	width: 100%;
+	text-align: left;
+}
+
+select, input, textarea {
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+/* What is CTS, Mission */
+input, textarea{
+	box-sizing: border-box;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=email], input[type=number], select, textarea {
+	width: 100%;
+	display: inline-block;
+	border: 1px solid #999999;
+	background: #f1f1f1;
+	font-size: 18px;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, textarea:focus , select:focus{
+	background-color: #ddd;
+	outline: none;
+	border-color: #666666;
+}
+
+select option:hover{
+	background-color: #3333FF;
+}
+
+/* Set a style for all buttons */
+input[type=submit], input[type=reset], .nextBtn, .prevBtn {
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+	font-size: 18px;
+	border-radius: 8px;
+}
+
+/* home/ question page - style submit button */
+input[type=submit]{
+	background-color: #3333FF;
+}
+
+/* home/ question page - style hover submit button */
+input[type=submit]:hover {
+	background-color: #0000CC;
+}
+
+/* home page - style reset button */
+input[type=reset]{
+	background-color: #FF3333;
+	color: white;
+}
+
+/* home page - style hover reset button */
+input[type=reset]:hover {
+	background-color: #CC0000;
+}
+
+/* form page - style next n prev button */
+.nextBtn, .prevBtn {
+	background-color: #4CAF50;
+}
+
+/* form page - style hover next n prev button */
+.nextBtn:hover, .prevBtn:hover {
+	background-color: #555;
+	color: white;
+}
+
+/* home page - Send button */
+.homeTable input[type=submit], .prevBtn {
+	float: left;
+	width: 30%;
+}
+
+/* home page Reset button */
+.homeTable input[type=reset], .nextBtn, #formdiv .nextBtn {
+	float: right;
+	width: 30%;
+}
+
+/* question page input number */
+#formQ input[type=number] {
+	width: 50%;
+}
+
+/* question page input radio, checkbox */
+#formQ label{
+	padding-right: 10px;
+}
+
+#formQ input[type="checkbox" i], #formQ input[type="radio" i] {
+	width: 20px;
+}
+
+/* Textarea */
+textarea {
+	width: 100%;
+	height: 175px;
+	padding: 10px;
+	margin: 8px 0;
+}
+
+/* result fieldset */
+#prevResult fieldset {
+	padding: 0 5px 5px;
+	margin: 0;
+}
+
+/* Legend for Contact Us*/
+.homeTable legend {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+legend {
+	text-align: left;
+}
+
+/* Label */
+label {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* footer */
+footer {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+	background-color: #e6e6e6;
+	padding: 5px;
+	margin-bottom: 0;
+	color: #404040;
+}
+
+/* form.php formdiv background */
+#formdiv{
+	background-image: url("Background.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.modal {
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	padding-top: 50px;
+	overflow: auto; /* Enable scroll if needed */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	padding: 20px;
+	background-color: #fefefe;
+	margin: 1% auto 15%; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 70%;
+	border-radius: 8px;
+	text-align: center;
+}
+
+/* form.php style modal-content h3 */
+.modal-content h3{
+	color: #0099e6; 
+	font-size: 25px;
+	margin-top: 0;
+}
+
+.homeTable h3, h4 {
+	font-size: 22px;
+}
+
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 35px;
+	top: 15px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #fefefe;
+	text-decoration: none;
+	z-index: 1;
+}
+
+.close:hover, .close:focus {
+	color: #f44336;
+	cursor: pointer;
+}
+
+#PD, #pastResult, #thisResult {
+	margin: 10px 0;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.grade {
+	height: 84px;
+	margin: 0;
+}
+
+/* course code and course name */
+.col-65 input[type=text]{
+	margin: 0 7.5%;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbbbbb;
+	border: none;	
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.5;
+}
+
+.step.active {
+	opacity: 1;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input[type=text].invalid, input[type=email].invalid, select.invalid {
+	background-color: #ffdddd;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+	background-color: #4CAF50;
+}
+
+/* style add and remove button for courses */
+.courseAddBtn, .courseRemoveBtn {
+	color: white;
+	padding: 0px;
+	margin: 0;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+	font-size: 20px;
+	height: 42px;
+	width: 100%;
+	max-width: 84px;
+}
+
+/* course add button background color */
+.courseAddBtn {
+	background-color: #0099e6;
+}
+
+/* course remove button background color */
+.courseRemoveBtn {
+	background-color: #ff9900;
+}
+
+/* style question field */
+#quesdiv {
+	padding: 15px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+/* form.php instruction tab p font size*/
+#instruction p {
+	font-size: 20px;
+}
+
+/* time used font-size */
+#timeUsed {
+	font-size: 25px;
+}
+
+/* time used font-size */
+#timeUsed input[type=text] {
+	width: 50%;
+}
+
+.questionNo {
+	vertical-align: middle;
+}
+
+/* style question num */
+.questionNo h3 {
+	color: #0099e6; 
+	font-size: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+/* style question num */
+#quesdiv .prevBtn, #quesdiv .nextBtn {
+	width: 100%;
+}
+
+#term {
+	padding: 30px;
+	word-wrap: break-word;
+}
+
+#term a, a#termlink {
+	text-decoration: none;
+	color: black;
+}
+
+#term a:hover, a#termlink:hover{
+	color: #ff751a;
+}
+
+/* result page content */
+#resultContent {
+	padding: 40px;
+}
+
+/* result page h2 */
+#resultContent h2{
+	margin-top: 0px;
+}
+
+/* result page image */
+#resultImg {
+	float: right;
+}
+
+/* result page h2, h3 */
+#resultContent h2, #resultContent h3 {
+	text-align: center;
+}
+
+/* result page h4, p font size */
+.resultLeft h4, .resultLeft p {
+	font-size: 20px;
+}
+
+/* result page h4 */
+.resultLeft h4 {
+	margin: 16px 0;
+}
+
+/* result page left col */
+.resultLeft {
+	text-align: center;
+	width: 60%;
+	height: 350px;
+}
+
+/* result page left col text */
+.resultText {
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+/* result page right col */
+.resultRight {
+	width: 40%;
+}
+
+/* home page nav width */
+#homeNav {
+	width: 100%;
+}
+
+/* questions page table width 100% */
+#quesTable{
+	width: 100%;
+	height: 80%;
+}
+
+/* questions page table width 100% */
+#QuesNavTable {
+	width: 100%;
+	height: 20%;
+}
+
+/* questions page nav li width 100% */
+ #quesTable li{
+ 	width: 100%;
+ }
+
+/* questions page nav a width 100% */
+#quesTable a{
+	width: 100%;
+	padding: 5px 0;
+	text-align: center;
+	background-color: #E8E8E8;
+}
+
+/* questions page td width 30% */
+.td30 {
+	width: 30%;
+}
+
+/* questions page td image width 100% */
+.td30 img{
+	width: 100%;
+}
+
+/* questions page td width 55% */
+.td55 {
+	width: 55%;
+}
+
+/* questions page td width 50% */
+.td60 {
+	width: 60%;
+}
+
+/* questions page td width 15% */
+.td15 {
+	width: 15%;
+}
+
+/* questions page td width 20% */
+.td20 {
+	width: 20%;
+}
+
+/* question page active ques num */
+#quesTable .quesActive {
+	background-color: #555555;
+	color: white;
+}
+
+/* question page inactive ques num */
+#quesTable .quesInactive {
+	background-color: #E8E8E8;
+}
+
+/* question page answered ques num */
+#quesTable .quesSuccess {
+	background-color: #CCFFCC;
+}
+
+/* question page unanswered ques num */
+#quesTable .quesWarning {
+	background-color: #FF9999;
+}
+
+ul {
+	text-align: center;
+}
+
+span {
+  display: inline-block;
+}
+
+.row {
+	display: inline;
+}
+
+.fa {
+	background-color: #F5F5F5;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	display:inline-block;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+td#timeUsed h2 {
+	margin: 0;
+}
+
+#QuesNavTable #timeUsed{
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+/* questions.php - hide questions/ image */
+.hide {
+	display: none;
+}
+
+/* questions.php - unhide questions/ image */
+.unhide{
+	display: block;
+}
+
+/* form.php - alert warning */
+.alert-warning {
+	color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+/* responsive screen*/
+@media screen and (max-width: 850px) {
+	/* responsive navbar*/
+	#homeNav ul, #resultNav ul {
+		width: 355px;
+	}
+
+	#headContent1, #headContent2 {
+		text-align: center;
+		width: 100%;
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	/* result page left col */
+	.resultLeft {
+		width: 100%;
+		background: url(resultImg.png) no-repeat center center;
+		padding: 0;
+	}
+
+	#resultText {
+		background-color: rgba(242, 242, 242, 0.9);
+		height: 100%;
+	}
+
+
+	.resultLeft h4{
+		margin-top: 0;
+	}
+
+	/* result page right col */
+	.resultRight {
+		background: none;
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	/* responsive navbar*/
+	#homeNav ul, #resultNav ul {
+		width: 175px;
+	}
+
+	.homeTable{
+		width: 100%;
+	}
+
+	body {
+		text-align: center;
+	}
+
+	/* change column width */
+	#CTS td, #MISSION td, #contact td{
+		position: absolute;
+		padding: 0px;
+		width: calc(100% - 16px);
+		position: center;
+		overflow: auto;
+	}
+
+	#message form { 		
+		padding-right: 10px; 
+		right: 0;
+	}
+
+	/* remove background */
+	.homebg {
+		background-image: none;
+	}
+
+	.modal-content {
+		width: calc(100% - 40px);
+		border: 0;
+		border-radius: 0;
+		margin: 0px;
+		position: relative;
+	}
+
+	#formdiv {
+		padding-top: 0;
+		width: 100%;
+	}
+
+	.close {
+		color: #ffab45;
+	}
+
+	.resultLeft {
+		width: 100%;
+		height: auto;
+	}
+	
+	.resultRight {
+		clear: right;
+	}
+}
+
+@media screen and (max-width: 365px) {
+	/* responsive navbar*/
+	ul {
+		width: 100%;
+		text-align: left;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		width: 100%;
+		text-align: center;
+	}
+
+	li a {
+		float: none;
+		display: block;
+		padding: 0px;
+	}
+}
